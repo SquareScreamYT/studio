@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/*
+run this thingy
+npx tailwindcss -i ./input.css -o ./output.css
+*/
