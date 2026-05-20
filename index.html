@@ -11,17 +11,19 @@
 </head>
 <body class="bg-gray-50 text-gray-950 font-['Nunito_Sans'] scroll-smooth">
 
-  <header class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
-    <div class="flex items-center space-x-2">
-      <img src="images/pfp8.png" alt="sq" class="w-6 h-6 rounded-full object-cover" />
-      <h1 class="text-xl font-bold text-cyan-400">sq</h1>
-    </div>
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-2">
+        <img src="images/pfp8.png" alt="sq" class="w-6 h-6 rounded-full object-cover" />
+        <h1 class="text-xl font-bold text-cyan-400">sq</h1>
+      </div>
 
-    <nav class="space-x-6 hidden md:block">
-      <a href="#about" class="hover:text-cyan-400">About</a>
-      <a href="#projects" class="hover:text-cyan-400">Projects</a>
-      <a href="#contact" class="hover:text-cyan-400">Contact</a>
-    </nav>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#projects" class="hover:text-cyan-400">Projects</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <section class="h-screen relative bg-linear-to-r from-cyan-100 to-blue-100">
@@ -89,29 +91,94 @@
       />
     </div>
 
-    <div class="absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2
+    <div class="absolute top-1/2 left-1/2 md:left-2/3 transform -translate-x-1/2 -translate-y-1/2
                 bg-white/90 dark:bg-gray-900/90 shadow-2xl rounded-xl p-6 max-w-sm w-full
                 backdrop-blur-md">
       <div class="flex justify-center -mt-16">
         <img src="images/pfp8.png" alt="Profile" class="w-24 h-24 rounded-full border-4 border-white shadow-lg">
       </div>
-      <div class="mt-4 text-center">
-        <div style="width:80%; white-space:nowrap; overflow:hidden; font-family: 'Nunito Sans'; margin: 0 auto;">
-          <div style="display:inline-block; padding-left:100%; animation:marquee 30s linear infinite; font-size:1.5rem; margin:0;">
-            <h2><span class="text-gray-300 text-2xl font-bold">attál. helo. <span class="font-normal">今日は</span>. <span class="font-normal">你好</span>. </span><span class="text-gray-50 text-2xl font-bold">hi. </span><span class="text-gray-300 text-2xl font-bold">servus. hej. kaixo. yaa. toki. привіт. terve. aluu. <span class="font-normal">안녕</span>.</span>
-            <span class="text-gray-300 text-2xl font-bold">attál. helo. <span class="font-normal">今日は</span>. <span class="font-normal">你好</span>. </span><span class="text-gray-50 text-2xl font-bold">hi. </span><span class="text-gray-300 text-2xl font-bold">servus. hej. kaixo. yaa. toki. привіт. terve. aluu. <span class="font-normal">안녕</span>.</span></h2> 
+        <div class="mt-4 text-left">
+          <div
+            class="marquee-container"
+            style="width:80%; font-family:'Nunito Sans'; margin:0 auto;"
+          >
+            <div class="marquee-content text-gray-300 text-2xl font-bold">
+              <span class="text-gray-50 text-2xl font-bold">hi. </span>
+              attál. helo. <span class="font-normal">今日は</span>.
+              <span class="font-normal">你好</span>. servus. hej. kaixo. yaa. toki.
+              привіт. terve. aluu. <span class="font-normal">안녕</span>.
+            </div>
           </div>
-          <style>
-            @keyframes marquee {
-              0% { transform: translateX(0%); }
-              100% { transform: translateX(-50%); }
-            }
-          </style>
         </div>
-        <p class="mt-2 text-gray-700 dark:text-gray-300">
+
+        <style>
+          .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+          }
+
+          .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee 30s linear infinite;
+          }
+
+          @keyframes marquee {
+            from {
+              transform: translateX(0);
+            }
+
+            to {
+              transform: translateX(-100%);
+            }
+          }
+        </style>
+        <p class="mt-2 text-gray-700 dark:text-gray-300 text-center">
           Hi. I'm sq. I make stuff sometimes.
         </p>
       </div>
+    </div>
+  </section>
+
+  <section class="relative h-screen overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-30"
+      style="background-image: url('images/cenrail6.png');"
+    ></div>
+
+    <div class="relative z-10 w-full h-full">
+      <img
+        src="images/tyne_and_wear.png"
+        class="slide-1 absolute top-[8%] left-[10%] w-70 -rotate-12 rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-120 hover:z-20 hover:rotate-0"
+      />
+      
+      <img
+        src="images/bucharest.png"
+        class="slide-1 absolute bottom-[10%] left-[10%] w-70 rotate-4 rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-120 hover:z-20 hover:rotate-0"
+      />
+
+      <img
+        src="images/denver.png"
+        class="slide-1 absolute top-[18%] right-[10%] w-78 rotate-8 rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-120 hover:z-20 hover:rotate-0"
+      />
+
+      <img
+        src="images/doha.png"
+        class="slide-1 absolute bottom-[20%] left-[30%] w-64 rotate-9 rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-120 hover:z-20 hover:rotate-0"
+      />
+
+      <img
+        src="images/copenhagen.png"
+        class="slide-1 absolute top-[45%] left-[50%] w-74 -rotate-6 rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-120 hover:z-20 hover:rotate-0"
+      />
+
+      <img
+        src="images/freiburg.png"
+        class="slide-1 absolute bottom-[10%] right-[15%] w-72 rotate-11 rounded-xl shadow-2xl transition-transform duration-300 ease-out hover:scale-120 hover:z-20 hover:rotate-0"
+      />
     </div>
   </section>
 
@@ -119,6 +186,20 @@
     © 2025-2026 sq
   </footer>
 
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    const sr = ScrollReveal({
+      reset: false
+    });
+
+    sr.reveal(".slide-1", {
+      origin: "left",
+      distance: "200px",
+      duration: 1200,
+      easing: "ease-out",
+      interval: 120
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
