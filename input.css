@@ -2,7 +2,7 @@
 
 /*
 run this thingy
-npx tailwindcss -i ./input.css -o ./output.css
+npx tailwindcss -i ./input.css -o ./output.css --watch
 */
 
 @keyframes gradient-x {
